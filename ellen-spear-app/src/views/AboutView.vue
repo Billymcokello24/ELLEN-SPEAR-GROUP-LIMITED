@@ -67,7 +67,7 @@ onMounted(() => {
           <div class="a-corner tl"></div>
           <div class="a-corner br"></div>
           <div class="about-img-wrap">
-            <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=900&q=80" alt="Ellen Spear Group security operations">
+            <img src="/images/security-gate.png" alt="Ellen Spear Group security gate and entry monitoring">
           </div>
           <div class="about-float">
             <div class="about-float-num">100<sup style="font-size:1.1rem;color:var(--gold)">%</sup></div>

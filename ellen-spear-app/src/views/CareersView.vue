@@ -65,45 +65,12 @@ onMounted(() => {
           <div class="s-eyebrow reveal" style="justify-content:center">Active Opportunities</div>
           <h2 class="display reveal d1">Current <em>Openings</em></h2>
         </div>
-        <div class="job-list reveal mt-4">
-          <!-- Job 01 -->
-          <div class="job-card">
-            <div class="job-inner">
-              <div class="job-info">
-                <div class="job-meta">
-                  <span class="job-tag">Cybersecurity</span>
-                  <span class="job-type">Full-Time</span>
-                </div>
-                <h3 class="job-title">Senior Cybersecurity Analyst</h3>
-                <p class="job-loc">📍 Nairobi, Kenya (Hybrid)</p>
-              </div>
-              <div class="job-desc">
-                <p>Oversee digital threat assessments, manage intrusion prevention systems, and lead incident response protocols for elite corporate clients.</p>
-              </div>
-              <div class="job-action">
-                <button class="btn-line">Apply Now</button>
-              </div>
-            </div>
+        <div class="no-vacancies reveal d1">
+          <div class="nv-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
           </div>
-          <!-- Job 02 -->
-          <div class="job-card">
-            <div class="job-inner">
-              <div class="job-info">
-                <div class="job-meta">
-                  <span class="job-tag">Operations</span>
-                  <span class="job-type">Full-Time</span>
-                </div>
-                <h3 class="job-title">Security Operations Manager</h3>
-                <p class="job-loc">📍 Nairobi, Kenya (On-Site)</p>
-              </div>
-              <div class="job-desc">
-                <p>Coordinate rapid response units, manage on-site physical security details, and interface with regional tactical command centres.</p>
-              </div>
-              <div class="job-action">
-                <button class="btn-line">Apply Now</button>
-              </div>
-            </div>
-          </div>
+          <p>Currently, there are no active vacancies.</p>
+          <span class="nv-sub">Please check back later or submit a general application below.</span>
         </div>
       </div>
     </section>
@@ -239,6 +206,49 @@ onMounted(() => {
   font-size: .93rem;
   color: var(--fog);
   line-height: 1.7;
+}
+
+/* NO VACANCIES */
+.no-vacancies {
+  padding: 80px 40px;
+  text-align: center;
+  border: 1px dashed var(--line);
+  border-radius: var(--r);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.nv-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--surface);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.nv-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--gold);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.no-vacancies p {
+  font-family: var(--f-serif);
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--cream);
+}
+
+.nv-sub {
+  font-size: .93rem;
+  color: var(--mist);
 }
 
 .text-center { text-align: center; }
