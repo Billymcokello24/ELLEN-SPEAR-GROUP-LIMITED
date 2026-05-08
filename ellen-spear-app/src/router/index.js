@@ -53,6 +53,37 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: () => import('../views/ContactView.vue')
+    },
+    // SECTORS
+    {
+      path: '/sectors/corporate-commercial',
+      name: 'sector-corporate',
+      component: () => import('../views/sectors/CorporateCommercial.vue')
+    },
+    {
+      path: '/sectors/government-public',
+      name: 'sector-government',
+      component: () => import('../views/sectors/GovernmentPublic.vue')
+    },
+    {
+      path: '/sectors/residential-estates',
+      name: 'sector-residential',
+      component: () => import('../views/sectors/ResidentialEstates.vue')
+    },
+    {
+      path: '/sectors/industrial-manufacturing',
+      name: 'sector-industrial',
+      component: () => import('../views/sectors/IndustrialManufacturing.vue')
+    },
+    {
+      path: '/sectors/education-healthcare',
+      name: 'sector-education',
+      component: () => import('../views/sectors/EducationHealthcare.vue')
+    },
+    {
+      path: '/sectors/financial-banking',
+      name: 'sector-financial',
+      component: () => import('../views/sectors/FinancialBanking.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {

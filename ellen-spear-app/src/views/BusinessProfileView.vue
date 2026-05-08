@@ -74,42 +74,63 @@ onMounted(() => {
       </div>
     </section>
 
-    <!-- SECTORS SECTION -->
+    <!-- SECTORS SECTION - AS IN IMAGE -->
     <section id="sectors" class="bg-ink2-full">
       <div class="container">
         <div class="sectors-head">
-          <div class="s-eyebrow reveal" style="justify-content:center">Specialized Sectors</div>
-          <h2 class="display reveal d1">Protection Across<br><em>Critical Environments</em></h2>
+          <h2 class="display reveal" style="font-size: 3.5rem; text-align: center;">Protection Across</h2>
+          <h2 class="display reveal d1" style="font-size: 3.5rem; text-align: center; color: var(--gold2); font-style: italic; margin-top: -10px;">Every Sector</h2>
+          <p class="s-body reveal d2 mt-2" style="text-align: center; max-width: 600px; margin: 20px auto 0; font-size: .85rem; color: var(--mist);">From financial institutions to residential estates — bespoke security solutions across Africa's most critical environments.</p>
         </div>
         <div class="mosaic reveal mt-4">
-          <div class="mosaic-item">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=700&q=80" alt="Corporate Security">
+          <!-- Sector 01 -->
+          <RouterLink to="/sectors/corporate-commercial" class="mosaic-item">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=700&q=80" alt="Corporate & Commercial">
             <div class="mosaic-over">
-              <div class="mosaic-tag">Corporate</div>
-              <div class="mosaic-name">Financial & Commercial</div>
+              <div class="mosaic-tag">Sector 01</div>
+              <div class="mosaic-name">Corporate & Commercial</div>
             </div>
-          </div>
-          <div class="mosaic-item">
-            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=700&q=80" alt="Government Security">
+          </RouterLink>
+          <!-- Sector 02 -->
+          <RouterLink to="/sectors/government-public" class="mosaic-item">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=700&q=80" alt="Government & Public Institutions">
             <div class="mosaic-over">
-              <div class="mosaic-tag">Public</div>
-              <div class="mosaic-name">Government Institutions</div>
+              <div class="mosaic-tag">Sector 02</div>
+              <div class="mosaic-name">Government & Public Institutions</div>
             </div>
-          </div>
-          <div class="mosaic-item">
-            <img src="https://images.unsplash.com/photo-1554232456-8727aae0cfa4?w=700&q=80" alt="Residential Security">
+          </RouterLink>
+          <!-- Sector 03 -->
+          <RouterLink to="/sectors/residential-estates" class="mosaic-item">
+            <img src="https://images.unsplash.com/photo-1554232456-8727aae0cfa4?w=700&q=80" alt="Residential Estates">
             <div class="mosaic-over">
-              <div class="mosaic-tag">Residential</div>
-              <div class="mosaic-name">High-End Estates</div>
+              <div class="mosaic-tag">Sector 03</div>
+              <div class="mosaic-name">Residential Estates</div>
             </div>
-          </div>
-          <div class="mosaic-item">
-            <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=700&q=80" alt="Industrial Security">
+          </RouterLink>
+          <!-- Sector 04 -->
+          <RouterLink to="/sectors/industrial-manufacturing" class="mosaic-item">
+            <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=700&q=80" alt="Industrial & Manufacturing">
             <div class="mosaic-over">
-              <div class="mosaic-tag">Industrial</div>
-              <div class="mosaic-name">Manufacturing & Logistics</div>
+              <div class="mosaic-tag">Sector 04</div>
+              <div class="mosaic-name">Industrial & Manufacturing</div>
             </div>
-          </div>
+          </RouterLink>
+          <!-- Sector 05 -->
+          <RouterLink to="/sectors/education-healthcare" class="mosaic-item">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700&q=80" alt="Education & Healthcare">
+            <div class="mosaic-over">
+              <div class="mosaic-tag">Sector 05</div>
+              <div class="mosaic-name">Education & Healthcare</div>
+            </div>
+          </RouterLink>
+          <!-- Sector 06 -->
+          <RouterLink to="/sectors/financial-banking" class="mosaic-item">
+            <img src="https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?w=700&q=80" alt="Financial Services & Banking">
+            <div class="mosaic-over">
+              <div class="mosaic-tag">Sector 06</div>
+              <div class="mosaic-name">Financial Services & Banking</div>
+            </div>
+          </RouterLink>
         </div>
       </div>
     </section>
@@ -246,32 +267,30 @@ onMounted(() => {
 }
 
 /* SECTORS */
-.sectors-head { text-align: center; margin-bottom: 60px; }
+.sectors-head { margin-bottom: 60px; }
 
 .mosaic {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
 }
 
 .mosaic-item {
   position: relative;
   height: 280px;
   overflow: hidden;
-  background: var(--ink);
+  display: block;
 }
 
 .mosaic-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: .35;
+  opacity: .3;
   transition: transform .8s, opacity .4s;
 }
 
-.mosaic-item:hover img { transform: scale(1.08); opacity: .55; }
+.mosaic-item:hover img { transform: scale(1.08); opacity: .5; }
 
 .mosaic-over {
   position: absolute;
@@ -280,14 +299,14 @@ onMounted(() => {
   flex-direction: column;
   justify-content: flex-end;
   padding: 32px;
-  background: linear-gradient(to top, rgba(13, 13, 14, .9) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(13, 13, 14, .95) 0%, rgba(13, 13, 14, .05) 70%);
 }
 
 .mosaic-tag {
   font-family: var(--f-cond);
-  font-size: .65rem;
-  font-weight: 600;
-  letter-spacing: .12em;
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .2em;
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 8px;
@@ -295,7 +314,7 @@ onMounted(() => {
 
 .mosaic-name {
   font-family: var(--f-serif);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 300;
   color: var(--cream);
   line-height: 1.2;

@@ -54,6 +54,7 @@
   background: var(--ink2);
   border-top: 1px solid var(--line);
   padding: 64px 0 36px;
+  margin-top: 240px;
 }
 
 .foot-top {
