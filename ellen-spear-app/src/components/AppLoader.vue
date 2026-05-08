@@ -24,6 +24,12 @@ onMounted(() => {
       <span class="loader-char gold">E</span>
       <span class="loader-char gold">A</span>
       <span class="loader-char gold">R</span>
+      <span class="loader-char">&nbsp;</span>
+      <span class="loader-char gold">G</span>
+      <span class="loader-char gold">R</span>
+      <span class="loader-char gold">O</span>
+      <span class="loader-char gold">U</span>
+      <span class="loader-char gold">P</span>
     </div>
     <div class="loader-line"></div>
   </div>

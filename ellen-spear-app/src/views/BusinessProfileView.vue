@@ -74,18 +74,18 @@ onMounted(() => {
       </div>
     </section>
 
-    <!-- SECTORS SECTION - AS IN IMAGE -->
+    <!-- SECTORS SECTION - KENYAN IMAGES -->
     <section id="sectors" class="bg-ink2-full">
       <div class="container">
         <div class="sectors-head">
           <h2 class="display reveal" style="font-size: 3.5rem; text-align: center;">Protection Across</h2>
           <h2 class="display reveal d1" style="font-size: 3.5rem; text-align: center; color: var(--gold2); font-style: italic; margin-top: -10px;">Every Sector</h2>
-          <p class="s-body reveal d2 mt-2" style="text-align: center; max-width: 600px; margin: 20px auto 0; font-size: .85rem; color: var(--mist);">From financial institutions to residential estates — bespoke security solutions across Africa's most critical environments.</p>
+          <p class="s-body reveal d2 mt-2" style="text-align: center; max-width: 600px; margin: 20px auto 0; font-size: .85rem; color: var(--mist);">From financial institutions to residential estates — bespoke security solutions across Kenya's most critical environments.</p>
         </div>
         <div class="mosaic reveal mt-4">
           <!-- Sector 01 -->
           <RouterLink to="/sectors/corporate-commercial" class="mosaic-item">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=700&q=80" alt="Corporate & Commercial">
+            <img src="../assets/images/sectors/corporate.png" alt="Corporate & Commercial Nairobi">
             <div class="mosaic-over">
               <div class="mosaic-tag">Sector 01</div>
               <div class="mosaic-name">Corporate & Commercial</div>
@@ -93,7 +93,7 @@ onMounted(() => {
           </RouterLink>
           <!-- Sector 02 -->
           <RouterLink to="/sectors/government-public" class="mosaic-item">
-            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=700&q=80" alt="Government & Public Institutions">
+            <img src="../assets/images/sectors/government.png" alt="Government & Public Institutions Kenya">
             <div class="mosaic-over">
               <div class="mosaic-tag">Sector 02</div>
               <div class="mosaic-name">Government & Public Institutions</div>
@@ -101,7 +101,7 @@ onMounted(() => {
           </RouterLink>
           <!-- Sector 03 -->
           <RouterLink to="/sectors/residential-estates" class="mosaic-item">
-            <img src="https://images.unsplash.com/photo-1554232456-8727aae0cfa4?w=700&q=80" alt="Residential Estates">
+            <img src="../assets/images/sectors/residential.png" alt="Residential Estates Karen Nairobi">
             <div class="mosaic-over">
               <div class="mosaic-tag">Sector 03</div>
               <div class="mosaic-name">Residential Estates</div>
@@ -109,7 +109,7 @@ onMounted(() => {
           </RouterLink>
           <!-- Sector 04 -->
           <RouterLink to="/sectors/industrial-manufacturing" class="mosaic-item">
-            <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=700&q=80" alt="Industrial & Manufacturing">
+            <img src="../assets/images/sectors/corporate.png" alt="Industrial & Manufacturing Kenya">
             <div class="mosaic-over">
               <div class="mosaic-tag">Sector 04</div>
               <div class="mosaic-name">Industrial & Manufacturing</div>
@@ -117,7 +117,7 @@ onMounted(() => {
           </RouterLink>
           <!-- Sector 05 -->
           <RouterLink to="/sectors/education-healthcare" class="mosaic-item">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700&q=80" alt="Education & Healthcare">
+            <img src="../assets/images/sectors/government.png" alt="Education & Healthcare Kenya">
             <div class="mosaic-over">
               <div class="mosaic-tag">Sector 05</div>
               <div class="mosaic-name">Education & Healthcare</div>
@@ -125,7 +125,7 @@ onMounted(() => {
           </RouterLink>
           <!-- Sector 06 -->
           <RouterLink to="/sectors/financial-banking" class="mosaic-item">
-            <img src="https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?w=700&q=80" alt="Financial Services & Banking">
+            <img src="https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?w=700&q=80" alt="Financial Services & Banking Kenya">
             <div class="mosaic-over">
               <div class="mosaic-tag">Sector 06</div>
               <div class="mosaic-name">Financial Services & Banking</div>

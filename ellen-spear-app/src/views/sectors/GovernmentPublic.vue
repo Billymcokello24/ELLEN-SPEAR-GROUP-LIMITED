@@ -21,7 +21,7 @@ onMounted(() => {
       eyebrow="Sector 02"
       title="Government & <em>Public</em>"
       subtitle="Safeguarding public interest through robust protection of government facilities and critical public infrastructure."
-      image="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1800&q=80"
+      image="../../assets/images/sectors/government.png"
     />
 
     <section class="container" style="padding-top: 0">

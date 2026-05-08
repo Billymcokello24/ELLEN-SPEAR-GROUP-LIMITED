@@ -21,7 +21,7 @@ onMounted(() => {
       eyebrow="Sector 03"
       title="Residential <em>Estates</em>"
       subtitle="Comprehensive protection for high-end residential communities, ensuring peace of mind through elite guarding and smart perimeter tech."
-      image="https://images.unsplash.com/photo-1554232456-8727aae0cfa4?w=1800&q=80"
+      image="../../assets/images/sectors/residential.png"
     />
 
     <section class="container" style="padding-top: 0">

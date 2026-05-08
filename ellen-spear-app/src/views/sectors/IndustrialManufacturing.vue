@@ -21,7 +21,7 @@ onMounted(() => {
       eyebrow="Sector 04"
       title="Industrial & <em>Manufacturing</em>"
       subtitle="Securing the backbone of industry. Robust protection for manufacturing plants, warehouses, and logistical hubs."
-      image="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=1800&q=80"
+      image="../../assets/images/sectors/corporate.png"
     />
 
     <section class="container" style="padding-top: 0">

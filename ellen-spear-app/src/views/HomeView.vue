@@ -19,7 +19,7 @@ onMounted(() => {
     <!-- HERO -->
     <section id="hero">
       <div class="hero-bg">
-        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1800&q=80" alt="Cyber Security Infrastructure">
+        <img src="../assets/images/security-gate.png" alt="Nairobi Skyline Corporate Security">
       </div>
       <div class="hero-main">
         <div class="hero-eyebrow">
