@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;500;600;700&display=swap');
+
+:root {
+  --ink: #0d0d0e;
+  --ink2: #141416;
+  --surface: #1a1a1c;
+  --line: #2a2a2e;
+  --line2: #3a3a3e;
+  --gold: #b8933a;
+  --gold2: #d4aa56;
+  --gold3: #f0cc7a;
+  --cream: #f5f0e8;
+  --fog: #9a9a9e;
+  --mist: #6a6a6e;
+  --white: #fafaf8;
+  --r: 2px;
+  --f-serif: 'Cormorant Garamond', Georgia, serif;
+  --f-sans: 'Barlow', sans-serif;
+  --f-cond: 'Barlow Condensed', sans-serif;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--ink);
+  color: var(--white);
+  font-family: var(--f-sans);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ink);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* SHARED ELEMENTS */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+@media (max-width: 1100px) {
+  .container { padding: 0 40px; }
+}
+
+@media (max-width: 680px) {
+  .container { padding: 0 24px; }
+}
+
+.s-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--f-cond);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.s-eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+}
+
+h2.display {
+  font-family: var(--f-serif);
+  font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -.01em;
+}
+
+h2.display em {
+  font-style: italic;
+  color: var(--gold2);
+}
+
+.s-body {
+  font-size: .97rem;
+  font-weight: 300;
+  color: var(--fog);
+  line-height: 1.8;
+  max-width: 500px;
+}
+
+/* BUTTONS */
+.btn-gold {
+  background: var(--gold);
+  color: var(--ink);
+  font-family: var(--f-cond);
+  font-weight: 700;
+  font-size: .82rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: 15px 34px;
+  border-radius: var(--r);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all .25s;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-gold:hover {
+  background: var(--gold2);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(184, 147, 58, .18);
+}
+
+.btn-gold svg, .btn-line svg {
+  transition: transform .2s;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  width: 16px;
+  height: 16px;
+}
+
+.btn-gold:hover svg {
+  transform: translateX(4px);
+}
+
+.btn-line {
+  color: var(--cream);
+  font-family: var(--f-cond);
+  font-weight: 500;
+  font-size: .82rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: 15px 28px;
+  border-radius: var(--r);
+  border: 1px solid var(--line2);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all .2s;
+  white-space: nowrap;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-line:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ANIMATIONS */
+@keyframes liftIn {
+  to { transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .85s ease, transform .85s ease;
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+.d1 { transition-delay: .1s; }
+.d2 { transition-delay: .2s; }
+.d3 { transition-delay: .3s; }
+.d4 { transition-delay: .4s; }
+.d5 { transition-delay: .5s; }
+
+/* UTILITIES */
+.text-gold { color: var(--gold2); }
+.mt-1 { margin-top: 10px; }
+.mt-2 { margin-top: 20px; }
+.mt-3 { margin-top: 30px; }
+.mt-4 { margin-top: 40px; }
+.mb-1 { margin-bottom: 10px; }
+.mb-2 { margin-bottom: 20px; }
+.mb-3 { margin-bottom: 30px; }
+.mb-4 { margin-bottom: 40px; }
+
+section {
+  padding: 240px 0;
+}
+
+@media (max-width: 1100px) {
+  section { padding: 120px 0; }
+}
+
+.bg-ink2-full {
+  background: var(--ink2);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding-left: calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
+}
