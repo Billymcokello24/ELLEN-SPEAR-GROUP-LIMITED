@@ -26,9 +26,9 @@ onMounted(() => {
           <span class="hero-eyebrow-text">Africa's Premier Security & Intelligence Partner</span>
         </div>
         <h1 class="hero-h1">
-          <span class="hl"><span class="hl-inner">Tactical <em>Force.</em></span></span>
-          <span class="hl"><span class="hl-inner">Digital <em>Defense.</em></span></span>
-          <span class="hl"><span class="hl-inner">Total Protection.</span></span>
+          <span class="hl"><span class="hl-inner">Physical.</span></span>
+          <span class="hl"><span class="hl-inner"><em>Digital.</em></span></span>
+          <span class="hl"><span class="hl-inner">Absolute.</span></span>
         </h1>
         <p class="hero-sub">We engineer impenetrable security architectures for modern institutions, combining elite on-ground tactical units with advanced cyber-intelligence to secure Africa's most critical assets.</p>
         <div class="hero-actions">
@@ -256,7 +256,7 @@ onMounted(() => {
 
 .hero-h1 {
   font-family: var(--f-serif);
-  font-size: clamp(4rem, 8vw, 8.5rem);
+  font-size: clamp(3.5rem, 8.5vw, 8.5rem);
   font-weight: 300;
   line-height: .92;
   letter-spacing: -.02em;

@@ -111,9 +111,9 @@ onMounted(() => {
   <div class="business-profile-page">
     <PageHero 
       eyebrow="Institutional Profile"
-      title="Architecture of <em>Trust</em>"
-      subtitle="The only firm in Africa delivering certified cybersecurity expertise alongside trained ground-force protection — fully integrated under one roof."
-      image="../../public/cabing.png"
+      title="Integrated <em>Security</em> Solutions"
+      subtitle="Ellen Spear Group is a premier security and technology firm providing comprehensive physical guarding, intelligent surveillance, and cutting-edge ICT infrastructure for leading institutions."
+      image="/cabing.png"
     />
 
     <!-- THE ADVANTAGE SECTION -->
@@ -176,52 +176,57 @@ onMounted(() => {
         </div>
         <div class="mosaic reveal mt-4">
           <!-- Sector 01 -->
-          <RouterLink to="/sectors/corporate-commercial" class="mosaic-item">
-            <img src="../assets/images/sectors/corporate.png" alt="Corporate & Commercial Nairobi">
-            <div class="mosaic-over">
-              <div class="mosaic-tag">Sector 01</div>
-              <div class="mosaic-name">Corporate & Commercial</div>
+          <RouterLink to="/sectors/corporate-commercial" class="sector-icon-card">
+            <div class="sic-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 22V2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v20"/><path d="M14 6h.01M10 6h.01M14 10h.01M10 10h.01M14 14h.01M10 14h.01M14 18h.01M10 18h.01"/></svg>
             </div>
+            <div class="sic-tag">Sector 01</div>
+            <div class="sic-name">Corporate & Commercial</div>
           </RouterLink>
+          
           <!-- Sector 02 -->
-          <RouterLink to="/sectors/government-public" class="mosaic-item">
-            <img src="../assets/images/sectors/government.png" alt="Government & Public Institutions Kenya">
-            <div class="mosaic-over">
-              <div class="mosaic-tag">Sector 02</div>
-              <div class="mosaic-name">Government & Public Institutions</div>
+          <RouterLink to="/sectors/government-public" class="sector-icon-card">
+            <div class="sic-icon">
+              <svg viewBox="0 0 24 24"><path d="M2 22h20M12 2L2 7l10 5 10-5-10-5zM6 12v6M10 12v6M14 12v6M18 12v6"/></svg>
             </div>
+            <div class="sic-tag">Sector 02</div>
+            <div class="sic-name">Government & Public Institutions</div>
           </RouterLink>
+          
           <!-- Sector 03 -->
-          <RouterLink to="/sectors/residential-estates" class="mosaic-item">
-            <img src="../assets/images/sectors/residential.png" alt="Residential Estates Karen Nairobi">
-            <div class="mosaic-over">
-              <div class="mosaic-tag">Sector 03</div>
-              <div class="mosaic-name">Residential Estates</div>
+          <RouterLink to="/sectors/residential-estates" class="sector-icon-card">
+            <div class="sic-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
             </div>
+            <div class="sic-tag">Sector 03</div>
+            <div class="sic-name">Residential Estates</div>
           </RouterLink>
+          
           <!-- Sector 04 -->
-          <RouterLink to="/sectors/industrial-manufacturing" class="mosaic-item">
-            <img src="../assets/images/sectors/corporate.png" alt="Industrial & Manufacturing Kenya">
-            <div class="mosaic-over">
-              <div class="mosaic-tag">Sector 04</div>
-              <div class="mosaic-name">Industrial & Manufacturing</div>
+          <RouterLink to="/sectors/industrial-manufacturing" class="sector-icon-card">
+            <div class="sic-icon">
+              <svg viewBox="0 0 24 24"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/></svg>
             </div>
+            <div class="sic-tag">Sector 04</div>
+            <div class="sic-name">Industrial & Manufacturing</div>
           </RouterLink>
+          
           <!-- Sector 05 -->
-          <RouterLink to="/sectors/education-healthcare" class="mosaic-item">
-            <img src="../assets/images/sectors/government.png" alt="Education & Healthcare Kenya">
-            <div class="mosaic-over">
-              <div class="mosaic-tag">Sector 05</div>
-              <div class="mosaic-name">Education & Healthcare</div>
+          <RouterLink to="/sectors/education-healthcare" class="sector-icon-card">
+            <div class="sic-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
             </div>
+            <div class="sic-tag">Sector 05</div>
+            <div class="sic-name">Education & Healthcare</div>
           </RouterLink>
+          
           <!-- Sector 06 -->
-          <RouterLink to="/sectors/financial-banking" class="mosaic-item">
-            <img src="https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?w=700&q=80" alt="Financial Services & Banking Kenya">
-            <div class="mosaic-over">
-              <div class="mosaic-tag">Sector 06</div>
-              <div class="mosaic-name">Financial Services & Banking</div>
+          <RouterLink to="/sectors/financial-banking" class="sector-icon-card">
+            <div class="sic-icon">
+              <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
             </div>
+            <div class="sic-tag">Sector 06</div>
+            <div class="sic-name">Financial Services & Banking</div>
           </RouterLink>
         </div>
       </div>
@@ -239,7 +244,7 @@ onMounted(() => {
           <!-- William Ololo -->
           <div class="leader-card reveal d1">
             <div class="leader-img">
-              <img src="/images/William.jpeg" alt="William Ololo" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80'">
+              <img src="/images/profile.jpg" alt="William Ololo" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80'">
             </div>
             <div class="leader-info">
               <h3>William Ololo</h3>
@@ -269,7 +274,7 @@ onMounted(() => {
           <!-- Philip Eddy Anayo -->
           <div class="leader-card reveal d3">
             <div class="leader-img">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Philip Eddy Anayo" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80'">
+              <img src="/images/william.png" alt="Philip Eddy Anayo" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80'">
             </div>
             <div class="leader-info">
               <h3>Philip Eddy Anayo</h3>
@@ -444,44 +449,69 @@ onMounted(() => {
 .mosaic {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4px;
+  gap: 24px;
 }
 
-.mosaic-item {
-  position: relative;
-  height: 280px;
-  overflow: hidden;
-  display: block;
-}
-
-.mosaic-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: .3;
-  transition: transform .8s, opacity .4s;
-}
-
-.mosaic-item:hover img { transform: scale(1.08); opacity: .5; }
-
-.mosaic-over {
-  position: absolute;
-  inset: 0;
+.sector-icon-card {
+  background: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 40px 30px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 32px;
-  background: linear-gradient(to top, rgba(13, 13, 14, .95) 0%, rgba(13, 13, 14, .05) 70%);
+  transition: border-color .3s, transform .3s;
+  text-decoration: none;
 }
 
-.mosaic-tag {
+.sector-icon-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-5px);
+}
+
+.sic-icon {
+  width: 54px;
+  height: 54px;
+  border: 1px solid var(--line2);
+  border-radius: var(--r);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  background: var(--ink2);
+  transition: border-color .3s, background .3s;
+}
+
+.sector-icon-card:hover .sic-icon {
+  border-color: var(--gold);
+  background: rgba(184, 147, 58, 0.07);
+}
+
+.sic-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--gold);
+  stroke-width: 1.5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sic-tag {
   font-family: var(--f-cond);
-  font-size: .6rem;
+  font-size: .65rem;
   font-weight: 700;
-  letter-spacing: .2em;
-  text-transform: uppercase;
+  letter-spacing: .15em;
   color: var(--gold);
-  margin-bottom: 8px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.sic-name {
+  font-family: var(--f-serif);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.25;
 }
 
 .mosaic-name {
