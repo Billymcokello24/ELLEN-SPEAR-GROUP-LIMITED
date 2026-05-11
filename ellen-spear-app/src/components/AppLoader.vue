@@ -9,9 +9,11 @@ onMounted(() => {
   }, 2200)
 })
 </script>
-
 <template>
   <div id="loader" :class="{ 'out': isOut }">
+    <div class="loader-logo-wrap">
+      <img src="/ellen-spear-logo.png" alt="Ellen Spear Logo" class="loader-logo">
+    </div>
     <div class="loader-text">
       <span class="loader-char">E</span>
       <span class="loader-char">L</span>
@@ -53,6 +55,23 @@ onMounted(() => {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.loader-logo-wrap {
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: logoIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.loader-logo {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
+@keyframes logoIn {
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .loader-text {
@@ -102,5 +121,21 @@ onMounted(() => {
 
 @keyframes growLine {
   to { height: 60px; }
+}
+
+@media (max-width: 680px) {
+  .loader-text {
+    font-size: 1.2rem;
+    gap: 0.2em;
+    letter-spacing: 0.1em;
+  }
+  
+  .loader-logo {
+    width: 60px;
+  }
+  
+  .loader-logo-wrap {
+    margin-bottom: 20px;
+  }
 }
 </style>
