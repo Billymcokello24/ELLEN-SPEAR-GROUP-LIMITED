@@ -21,7 +21,7 @@ onMounted(() => {
       eyebrow="Join the Elite"
       title="Join Our <em>Elite</em><br>Security Force"
       subtitle="We are always looking for dedicated professionals to join our growing family. Build a rewarding career protecting Africa's most demanding environments."
-      image="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1800&q=80"
+      image="../../public/team.png"
     />
 
     <!-- BENEFITS SECTION -->

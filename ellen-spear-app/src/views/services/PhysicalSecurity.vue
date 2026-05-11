@@ -21,7 +21,7 @@ onMounted(() => {
       eyebrow="Capabilities / 02"
       title="Physical <em>Security</em>"
       subtitle="Elite trained personnel and advanced tactical infrastructure ensuring complete on-ground protection for Africa's most demanding environments."
-      image="https://images.unsplash.com/photo-1582139329536-e7284fece509?w=1800&q=80"
+      image="../../public/probox.png"
     />
 
     <section class="container" style="padding-top: 0">
@@ -82,7 +82,7 @@ onMounted(() => {
       <div class="container">
         <div class="tech-grid">
           <div class="tech-img reveal">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Physical Security Operations">
+            <img src="../../../public/cabing.png" alt="Physical Security Operations">
             <div class="img-over"></div>
           </div>
           <div class="tech-content">

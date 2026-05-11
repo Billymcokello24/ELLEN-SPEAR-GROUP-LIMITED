@@ -1,6 +1,98 @@
 <script setup>
-import { onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import PageHero from '../components/PageHero.vue'
+
+const showClientModal = ref(false)
+const selectedClient = ref(null)
+
+const clients = [
+  {
+    id: 'ge',
+    name: 'Geodamil Enterprise Limited',
+    tag: 'Logistics & Enterprise',
+    logoText: 'GE',
+    logoImg: null,
+    brief: 'Providing comprehensive enterprise solutions and logistical support across diverse operational terrains.'
+  },
+  {
+    id: 'dwp',
+    name: 'Digital World Prodigy Limited',
+    tag: 'ICT & Digital',
+    logoText: 'DWP',
+    logoImg: null,
+    brief: 'Strategic partner in advanced digital infrastructure and complex IT security integration projects.'
+  },
+  {
+    id: 'homeland',
+    name: 'Homeland Itoya Events',
+    tag: 'Event Management',
+    logoText: 'HIE',
+    logoImg: '/homeland.png',
+    brief: 'Homeland Itoya Events is a premier, full-service event management and supply company based in Kenya. The company handles a wide variety of events, ranging from intimate celebrations to state functions.'
+  },
+  {
+    id: 'ellegardens',
+    name: 'Elle Gardens',
+    tag: 'Hospitality & Events',
+    logoText: 'EG',
+    logoImg: '/elle.jpg',
+    brief: 'Elle Gardens is a highly regarded establishment in Kisumu, providing serene event hosting and lifestyle experiences.'
+  },
+  {
+    id: 'siaya',
+    name: 'Siaya County Club',
+    tag: 'Hospitality',
+    logoText: 'SCC',
+    logoImg: '/images/clients/siaya.png',
+    brief: 'Siaya County Club is a premier hospitality establishment located in Siaya, offering restaurant services, conference facilities, and accommodation for leisure and corporate stays.'
+  },
+  {
+    id: 'prodigy',
+    name: 'Prodigy Constructions Limited',
+    tag: 'Infrastructure',
+    logoText: 'PCL',
+    logoImg: '/images/clients/prodigy.png',
+    brief: 'Prodigy Constructions Limited is a prominent firm specializing in technology-driven infrastructure solutions and comprehensive building construction.'
+  },
+  {
+    id: 'lala',
+    name: 'Lala Cabs Limited',
+    tag: 'Mobility & Logistics',
+    logoText: 'LCL',
+    logoImg: '/Lalacabs.jpeg',
+    brief: 'Lala Cabs Limited is a Kenya-based mobility company providing car rental services, airport transfers, and corporate transportation across major cities.'
+  },
+  {
+    id: 'rockwell',
+    name: 'Rockwell Hotel',
+    tag: 'Hospitality',
+    logoText: 'RH',
+    logoImg: '/Rockwell.jpeg',
+    brief: 'Rockwell Hotel, situated in Kisumu, offers refined accommodation and hospitality services, prioritizing guest security and comfort.'
+  },
+  {
+    id: 'cotec',
+    name: 'Cotec Security Limited',
+    tag: 'Integrated Security',
+    logoText: 'CSL',
+    logoImg: '/cotec.jpeg',
+    brief: 'Cotec Security Limited provides integrated security solutions including manned guarding, electronic security systems, and security training across Kenya.'
+  }
+]
+
+const openClientModal = (client) => {
+  selectedClient.value = client
+  showClientModal.value = true
+  document.body.style.overflow = 'hidden'
+}
+
+const closeClientModal = () => {
+  showClientModal.value = false
+  setTimeout(() => {
+    selectedClient.value = null
+    document.body.style.overflow = ''
+  }, 300)
+}
 
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {
@@ -21,7 +113,7 @@ onMounted(() => {
       eyebrow="Institutional Profile"
       title="Architecture of <em>Trust</em>"
       subtitle="The only firm in Africa delivering certified cybersecurity expertise alongside trained ground-force protection — fully integrated under one roof."
-      image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1800&q=80"
+      image="../../public/cabing.png"
     />
 
     <!-- THE ADVANTAGE SECTION -->
@@ -29,7 +121,7 @@ onMounted(() => {
       <div class="adv-grid">
         <div class="adv-sticky">
           <div class="adv-img reveal">
-            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=700&q=80" alt="Security professional">
+            <img src="../../public/team.png" alt="Security professional">
             <div class="adv-img-over"></div>
             <div class="adv-img-quote">
               <blockquote>"Threats do not distinguish between physical and digital. Neither do we."</blockquote>
@@ -135,34 +227,7 @@ onMounted(() => {
       </div>
     </section>
 
-    <!-- STRATEGIC PARTNERS SECTION -->
-    <section id="partners" class="container">
-      <div class="partners-row">
-        <div class="partners-head">
-          <div class="s-eyebrow reveal">Our Network</div>
-          <h2 class="display reveal d1">Strategic<br><em>Alliances</em></h2>
-          <p class="s-body reveal d2 mt-2">Collaborating with regional leaders to deliver unparalleled operational excellence and digital innovation.</p>
-        </div>
-        <div class="partners-cards">
-          <div class="partner-card reveal d1">
-            <div class="partner-top">
-              <div class="partner-ico">GE</div>
-              <span class="partner-tag">Logistics & Enterprise</span>
-            </div>
-            <h3>Geodamil Enterprise Limited</h3>
-            <p>Providing comprehensive enterprise solutions and logistical support across diverse operational terrains.</p>
-          </div>
-          <div class="partner-card reveal d2">
-            <div class="partner-top">
-              <div class="partner-ico">DWP</div>
-              <span class="partner-tag">ICT & Digital</span>
-            </div>
-            <h3>Digital World Prodigy Limited</h3>
-            <p>Strategic partner in advanced digital infrastructure and complex IT security integration projects.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- REMOVED STRATEGIC PARTNERS SECTION TO COMBINE WITH CLIENTS -->
     <!-- LEADERSHIP SECTION -->
     <section id="leadership" class="bg-ink2-full" style="padding: 100px 0;">
       <div class="container">
@@ -174,93 +239,102 @@ onMounted(() => {
           <!-- William Ololo -->
           <div class="leader-card reveal d1">
             <div class="leader-img">
-              <img src="../assets/images/management/william_ololo.jpg" alt="William Ololo" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80'">
+              <img src="/images/William.jpeg" alt="William Ololo" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80'">
             </div>
             <div class="leader-info">
               <h3>William Ololo</h3>
               <p class="leader-title">Director – Human Security Operations</p>
               <div class="leader-bio">
-                <p>William Ololo is an accomplished security professional with over 30 years of experience in the security industry. He holds a Bachelor of Arts in Government and Public Administration from Moi University and has built a distinguished career in corporate security management, operations leadership, and strategic administration.</p>
-                <p>He currently serves as a Director at Cotec Security Limited, formerly Bedrock Holdings Ltd, where he provides leadership in human security operations, organizational governance, and client security solutions.</p>
-                <p>Beyond the security sector, William also serves as a Director at Siaya County Club, demonstrating his commitment to community leadership and institutional development.</p>
+                <p>William Ololo is an accomplished security professional with over 30 years of experience in the security industry. He has built a distinguished career in corporate security management...</p>
               </div>
+              <RouterLink to="/leadership/william-ololo" class="read-more-btn mt-3">Read More</RouterLink>
             </div>
           </div>
           
           <!-- Eng. David Wasonga -->
           <div class="leader-card reveal d2">
             <div class="leader-img">
-              <img src="../assets/images/management/david_wasonga.jpg" alt="Eng. David Wasonga" onerror="this.src='https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80'">
+              <img src="/images/David.jpeg" alt="Eng. David Wasonga" onerror="this.src='https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80'">
             </div>
             <div class="leader-info">
               <h3>Eng. David Wasonga</h3>
               <p class="leader-title">Director – ICT & Integrated Security Systems</p>
               <div class="leader-bio">
-                <p>Eng. David Wasonga is an accomplished Electrical and ICT Engineer with extensive experience in technology integration, digital transformation, and ICT infrastructure management. He holds a Master of Science (MSc.) in Electrical and Communication Engineering from Masinde Muliro University of Science and Technology.</p>
-                <p>He currently serves as the Regional ICT Manager at the ICT Authority, where he leads regional ICT initiatives, digital infrastructure deployment, systems integration, and technology governance.</p>
-                <p>Eng. Wasonga is also a Director at Prodigy Constructions Limited, where he contributes strategic leadership in technology-driven infrastructure solutions.</p>
+                <p>Eng. David Wasonga is an accomplished Electrical and ICT Engineer with extensive experience in technology integration, digital transformation, and ICT infrastructure management...</p>
               </div>
+              <RouterLink to="/leadership/david-wasonga" class="read-more-btn mt-3">Read More</RouterLink>
             </div>
           </div>
 
           <!-- Philip Eddy Anayo -->
           <div class="leader-card reveal d3">
             <div class="leader-img">
-              <img src="../assets/images/management/philip_anayo.jpg" alt="Philip Eddy Anayo" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80'">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Philip Eddy Anayo" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80'">
             </div>
             <div class="leader-info">
               <h3>Philip Eddy Anayo</h3>
               <p class="leader-title">Director – Strategy, Corp. Affairs & Business Dev</p>
               <div class="leader-bio">
-                <p>Philip Eddy Anayo is a seasoned entrepreneur and business leader with extensive experience in corporate leadership, public service, and organizational development. He currently serves as Director and CEO at Homeland Itoya Events.</p>
-                <p>He also serves as a Non-Executive Member at the Kenya Rugby Union. Philip has previously served as the Member of County Assembly (MCA) for Milimani Ward in Kisumu County Assembly, where he played a key role in leadership, policy oversight, and community representation.</p>
-                <p>With a diverse background spanning entrepreneurship, governance, and leadership, Philip brings strong expertise in business development, strategic partnerships, and corporate affairs.</p>
+                <p>Philip Eddy Anayo is a seasoned entrepreneur and business leader with extensive experience in corporate leadership, public service, and organizational development...</p>
               </div>
+              <RouterLink to="/leadership/philip-anayo" class="read-more-btn mt-3">Read More</RouterLink>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CLIENTS SECTION -->
-    <section id="clients" class="container" style="padding: 100px 0;">
+    <!-- OUR NETWORK (COMBINED PARTNERS & CLIENTS) -->
+    <section id="network" class="container" style="padding: 100px 0;">
       <div class="clients-head mb-5">
         <div class="s-eyebrow reveal" style="text-align: center;">Our Network</div>
-        <h2 class="display reveal d1" style="text-align: center;">Trusted <em>Clients</em></h2>
-        <p class="s-body reveal d2 mt-2" style="text-align: center; max-width: 600px; margin: 0 auto;">Providing premier security and intelligence solutions to leading institutions across the region.</p>
+        <h2 class="display reveal d1" style="text-align: center;">Strategic Alliances & <em>Clients</em></h2>
+        <p class="s-body reveal d2 mt-2" style="text-align: center; max-width: 600px; margin: 0 auto;">Collaborating with regional leaders and providing premier security and intelligence solutions to leading institutions.</p>
       </div>
       
       <div class="clients-grid">
-        <div class="client-card reveal d1">
-          <div class="client-logo">HIE</div>
-          <h4>Homeland Itoya Events</h4>
-        </div>
-        <div class="client-card reveal d2">
-          <div class="client-logo">EG</div>
-          <h4>Elle Gardens</h4>
-        </div>
-        <div class="client-card reveal d3">
-          <div class="client-logo">SCC</div>
-          <h4>Siaya County Club</h4>
-        </div>
-        <div class="client-card reveal d4">
-          <div class="client-logo">PCL</div>
-          <h4>Prodigy Constructions Limited</h4>
-        </div>
-        <div class="client-card reveal d5">
-          <div class="client-logo">LCL</div>
-          <h4>Lala Cabs Limited</h4>
-        </div>
-        <div class="client-card reveal d6">
-          <div class="client-logo">RH</div>
-          <h4>Rockwell Hotel</h4>
-        </div>
-        <div class="client-card reveal d7">
-          <div class="client-logo">CSL</div>
-          <h4>Cotec Security Limited</h4>
+        <div 
+          v-for="(client, index) in clients" 
+          :key="client.id"
+          class="partner-card reveal" 
+          :class="'d' + ((index % 4) + 1)"
+          @click="openClientModal(client)"
+          style="cursor: pointer;"
+        >
+          <div class="partner-top">
+            <div class="client-logo" style="margin: 0;">
+              <img v-if="client.logoImg" :src="client.logoImg" :alt="client.name" onerror="this.style.display='none'">
+              <span v-else>{{ client.logoText }}</span>
+            </div>
+            <span class="partner-tag" style="margin-left: 15px;">{{ client.tag }}</span>
+          </div>
+          <h3>{{ client.name }}</h3>
+          <p>{{ client.brief.substring(0, 100) }}...</p>
         </div>
       </div>
     </section>
+
+    <!-- CLIENT MODAL -->
+    <div class="modal-overlay" v-if="showClientModal" @click.self="closeClientModal">
+      <div class="client-modal">
+        <button class="modal-close" @click="closeClientModal">&times;</button>
+        <div class="modal-content" v-if="selectedClient">
+          <div class="modal-header">
+            <div class="modal-logo">
+              <img v-if="selectedClient.logoImg" :src="selectedClient.logoImg" :alt="selectedClient.name" onerror="this.style.display='none'">
+              <span v-else>{{ selectedClient.logoText }}</span>
+            </div>
+            <h3>{{ selectedClient.name }}</h3>
+          </div>
+          <div class="modal-body">
+            <p>{{ selectedClient.brief }}</p>
+          </div>
+          <div class="modal-actions">
+            <a v-if="selectedClient.logoImg" :href="selectedClient.logoImg" download class="btn-primary" style="display: inline-block;">Download Logo</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -552,33 +626,16 @@ onMounted(() => {
   margin-bottom: 0;
 }
 
-/* CLIENTS */
+/* NETWORK / CLIENTS */
 .clients-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.client-card {
-  background: rgba(13, 13, 14, 0.6);
-  border: 1px solid var(--line);
-  border-radius: var(--r);
-  padding: 30px 20px;
-  text-align: center;
-  width: 200px;
-  transition: border-color 0.3s, transform 0.3s;
-}
-
-.client-card:hover {
-  border-color: var(--gold);
-  transform: translateY(-5px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
 
 .client-logo {
   width: 60px;
   height: 60px;
-  margin: 0 auto 15px;
   border-radius: 50%;
   background: var(--ink2);
   display: flex;
@@ -589,15 +646,11 @@ onMounted(() => {
   color: var(--gold);
   font-size: 1.2rem;
   border: 1px solid rgba(212, 175, 55, 0.2);
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
-.client-card h4 {
-  font-family: var(--f-serif);
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--mist);
-  line-height: 1.4;
-}
+
 
 @media (max-width: 1100px) {
   .leadership-grid { grid-template-columns: repeat(2, 1fr); }
@@ -605,7 +658,134 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .leadership-grid { grid-template-columns: 1fr; }
-  .clients-grid { flex-direction: column; align-items: center; }
-  .client-card { width: 100%; max-width: 300px; }
+  .clients-grid { grid-template-columns: 1fr; }
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.client-modal {
+  background: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  padding: 40px;
+  animation: modalIn 0.3s ease;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--mist);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.3s;
+}
+
+.modal-close:hover {
+  color: var(--gold);
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 25px;
+}
+
+.modal-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--ink2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--f-cond);
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 1.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.modal-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-header h3 {
+  font-family: var(--f-serif);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--cream);
+}
+
+.modal-body p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--fog);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.modal-actions {
+  text-align: center;
+}
+
+.read-more-btn {
+  display: inline-block;
+  font-family: var(--f-cond);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border: 1px solid var(--gold);
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.client-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.client-card {
+  cursor: pointer;
 }
 </style>

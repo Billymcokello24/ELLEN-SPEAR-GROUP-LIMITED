@@ -21,7 +21,7 @@ onMounted(() => {
       eyebrow="Expertise & Capabilities"
       title="Integrated Protection.<br><em>Every Dimension.</em>"
       subtitle="From elite physical units to cutting-edge cybersecurity protocols, we provide end-to-end security architectures for Africa's most critical assets."
-      image="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1800&q=80"
+      image="../../public/cabing.png"
     />
 
     <!-- SERVICES GRID SECTION -->

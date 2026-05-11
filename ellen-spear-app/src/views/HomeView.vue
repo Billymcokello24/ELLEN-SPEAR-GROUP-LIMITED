@@ -19,18 +19,18 @@ onMounted(() => {
     <!-- HERO -->
     <section id="hero">
       <div class="hero-bg">
-        <img src="../assets/images/security-gate.png" alt="Nairobi Skyline Corporate Security">
+        <img src="../../public/cabing.png" alt="Nairobi Skyline Corporate Security">
       </div>
       <div class="hero-main">
         <div class="hero-eyebrow">
-          <span class="hero-eyebrow-text">Africa's Premier Integrated Security Partner</span>
+          <span class="hero-eyebrow-text">Africa's Premier Security & Intelligence Partner</span>
         </div>
         <h1 class="hero-h1">
-          <span class="hl"><span class="hl-inner">Physical.</span></span>
-          <span class="hl"><span class="hl-inner"><em>Digital.</em></span></span>
-          <span class="hl"><span class="hl-inner">United.</span></span>
+          <span class="hl"><span class="hl-inner">Tactical <em>Force.</em></span></span>
+          <span class="hl"><span class="hl-inner">Digital <em>Defense.</em></span></span>
+          <span class="hl"><span class="hl-inner">Total Protection.</span></span>
         </h1>
-        <p class="hero-sub">Ellen Spear Group delivers world-class integrated security — combining elite physical protection with cutting-edge IT security for Africa's most demanding environments.</p>
+        <p class="hero-sub">We engineer impenetrable security architectures for modern institutions, combining elite on-ground tactical units with advanced cyber-intelligence to secure Africa's most critical assets.</p>
         <div class="hero-actions">
           <RouterLink to="/services" class="btn-gold">
             Explore Services
@@ -105,7 +105,7 @@ onMounted(() => {
           <div class="a-corner tl"></div>
           <div class="a-corner br"></div>
           <div class="about-img-wrap">
-            <img src="/images/branded-hero.png" alt="ELLEN SPEAR GROUP LIMITED Command Centre">
+            <img src="../../public/ellen-spear-logo.png" alt="ELLEN SPEAR GROUP LIMITED Command Centre">
           </div>
           <div class="about-float">
             <div class="about-float-num">100<sup style="font-size:1.1rem;color:var(--gold)">%</sup></div>
@@ -171,7 +171,7 @@ onMounted(() => {
         </div>
         <div class="adv-right reveal d2">
           <div class="adv-img">
-            <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?w=700&q=80" alt="Security professional">
+            <img src="../../public/team.png" alt="Security professional">
             <div class="adv-img-over"></div>
             <div class="adv-img-quote">
               <blockquote>"Threats do not distinguish between physical and digital. Neither do we."</blockquote>

@@ -27,7 +27,7 @@ onMounted(() => {
       eyebrow="Establishment & Legacy"
       title="Where Security Meets <em>Sophistication</em>"
       subtitle="Ellen Spear Group is a premier security and technology solutions company dedicated to integrated protection for businesses, institutions, and individuals."
-      image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=80"
+      image="../../public/cabing.png"
     />
 
     <!-- MISSION & VISION SECTION -->
@@ -67,7 +67,7 @@ onMounted(() => {
           <div class="a-corner tl"></div>
           <div class="a-corner br"></div>
           <div class="about-img-wrap">
-            <img src="../assets/images/security-gate.png" alt="Ellen Spear Group security gate and entry monitoring">
+            <img src="../../public/team.png" alt="Ellen Spear Group security gate and entry monitoring">
           </div>
           <div class="about-float">
             <div class="about-float-num">100<sup style="font-size:1.1rem;color:var(--gold)">%</sup></div>

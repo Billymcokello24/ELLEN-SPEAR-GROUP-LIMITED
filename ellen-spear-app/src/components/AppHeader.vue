@@ -29,7 +29,7 @@ onUnmounted(() => {
 <template>
   <nav :class="['main-nav', { 'solid': isScrolled }]">
     <RouterLink to="/" class="nav-logo" @click="closeMobileMenu">
-      <div class="nav-emblem"><span>ESG</span></div>
+      <div class="nav-emblem"><img class="nav-logo-img" src="/ellen-spear-logo.png" alt=""></div>
       <span class="nav-wordmark">Ellen&nbsp;<em>Spear</em>&nbsp;Group</span>
     </RouterLink>
     
@@ -50,12 +50,20 @@ onUnmounted(() => {
       <RouterLink to="/contact" class="nav-cta">Get Protected</RouterLink>
     </div>
 
-    <div :class="['burger', { 'open': isMobileMenuOpen }]" @click="toggleMobileMenu">
-      <span></span><span></span><span></span>
+    <div :class="['burger-wrapper', { 'open': isMobileMenuOpen }]" @click="toggleMobileMenu">
+      <span class="burger-text">MENU</span>
+      <div class="burger">
+        <span></span><span></span><span></span>
+      </div>
     </div>
 
     <!-- Mobile Nav Overlay -->
+    <div :class="['mob-nav-backdrop', { 'open': isMobileMenuOpen }]" @click="closeMobileMenu"></div>
     <div :class="['mob-nav', { 'open': isMobileMenuOpen }]">
+      <div class="mob-nav-logo">
+        <img src="/ellen-spear-logo.png" alt="Ellen Spear Logo">
+        <span>Ellen <em>Spear</em> Group</span>
+      </div>
       <RouterLink to="/" @click="closeMobileMenu">Home</RouterLink>
       <RouterLink to="/about" @click="closeMobileMenu">About</RouterLink>
       <RouterLink to="/services" @click="closeMobileMenu">Services</RouterLink>
@@ -97,12 +105,17 @@ onUnmounted(() => {
 }
 
 .nav-emblem {
-  width: 38px;
-  height: 38px;
-  border: 1px solid var(--gold);
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.nav-logo-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .nav-emblem span {
@@ -200,60 +213,128 @@ onUnmounted(() => {
   transform: translateY(-1px);
 }
 
-.burger {
+.burger-wrapper {
   display: none;
-  flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  gap: 10px;
   cursor: pointer;
-  padding: 4px;
   z-index: 501;
 }
 
+.burger-text {
+  font-family: var(--f-cond);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--cream);
+  text-transform: uppercase;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+
 .burger span {
-  width: 20px;
-  height: 1px;
+  width: 24px;
+  height: 2px;
   background: var(--cream);
   transition: .3s;
 }
 
-.burger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-.burger.open span:nth-child(2) { opacity: 0; }
-.burger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+.burger-wrapper.open .burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger-wrapper.open .burger span:nth-child(2) { opacity: 0; }
+.burger-wrapper.open .burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mob-nav-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 399;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.mob-nav-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 .mob-nav {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 65%;
   z-index: 400;
   background: var(--ink);
+  border-left: 1px solid var(--line);
+  display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 32px;
-  display: none;
+  padding-left: 40px;
+  gap: 24px;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .mob-nav.open {
+  transform: translateX(0);
+}
+
+.mob-nav-logo {
+  position: absolute;
+  top: 40px;
+  left: 40px;
   display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.mob-nav-logo img {
+  width: 40px;
+  height: auto;
+}
+
+.mob-nav-logo span {
+  font-family: var(--f-cond);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cream);
+}
+
+.mob-nav-logo em {
+  font-style: normal;
+  color: var(--gold);
 }
 
 .mob-nav a {
   font-family: var(--f-serif);
-  font-size: 2.8rem;
+  font-size: 2rem;
   font-weight: 300;
   color: var(--cream);
   opacity: .6;
-  transition: opacity .2s, color .2s;
+  transition: opacity .2s, color .2s, transform 0.2s;
+  text-decoration: none;
 }
 
 .mob-nav a:hover {
   opacity: 1;
   color: var(--gold2);
+  transform: translateX(5px);
 }
 
 @media (max-width: 1100px) {
   .main-nav { padding: 0 32px; }
   .nav-links, .nav-right { display: none; }
-  .burger { display: flex; }
+  .burger-wrapper { display: flex; }
 }
 
 @media (max-width: 680px) {

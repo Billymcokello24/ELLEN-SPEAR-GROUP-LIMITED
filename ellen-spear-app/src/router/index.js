@@ -54,6 +54,22 @@ const router = createRouter({
       name: 'contact',
       component: () => import('../views/ContactView.vue')
     },
+    // LEADERSHIP
+    {
+      path: '/leadership/william-ololo',
+      name: 'leadership-william',
+      component: () => import('../views/leadership/WilliamOlolo.vue')
+    },
+    {
+      path: '/leadership/david-wasonga',
+      name: 'leadership-david',
+      component: () => import('../views/leadership/DavidWasonga.vue')
+    },
+    {
+      path: '/leadership/philip-anayo',
+      name: 'leadership-philip',
+      component: () => import('../views/leadership/PhilipAnayo.vue')
+    },
     // SECTORS
     {
       path: '/sectors/corporate-commercial',

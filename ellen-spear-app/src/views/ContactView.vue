@@ -21,7 +21,7 @@ onMounted(() => {
       eyebrow="Confidential Engagement"
       title="Let's Protect<br>What <em>Matters</em>"
       subtitle="Reach out for a confidential consultation, threat assessment, or immediate operational support."
-      image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=80"
+      image="../../public/cabing.png"
     />
 
     <!-- CONTACT FORM & INFO SECTION -->

@@ -21,7 +21,7 @@ onMounted(() => {
       eyebrow="Capabilities / 03"
       title="Alarm & <em>Rapid Response</em>"
       subtitle="Swift, round-the-clock emergency intervention backed by integrated alarm systems and 24/7 tactical monitoring."
-      image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=80"
+      image="../../public/cabing.png"
     />
 
     <section class="container" style="padding-top: 0">
@@ -82,7 +82,7 @@ onMounted(() => {
       <div class="container">
         <div class="tech-grid">
           <div class="tech-img reveal">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Alarm Monitoring Operations">
+            <img src="../../../public/probox.png" alt="Alarm Monitoring Operations">
             <div class="img-over"></div>
           </div>
           <div class="tech-content">
