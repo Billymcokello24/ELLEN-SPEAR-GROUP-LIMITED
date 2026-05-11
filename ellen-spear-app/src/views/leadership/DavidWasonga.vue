@@ -13,7 +13,7 @@ onMounted(() => {
       eyebrow="Executive Leadership"
       title="Eng. David <em>Wasonga</em>"
       subtitle="Director – ICT & Integrated Security Systems"
-      image="/images/branded-hero.png"
+      image="/cabing.png"
     />
     
     <div class="container pt-5 pb-5">

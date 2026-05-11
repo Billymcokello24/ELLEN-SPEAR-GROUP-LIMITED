@@ -13,7 +13,7 @@ onMounted(() => {
       eyebrow="Executive Leadership"
       title="Philip Eddy <em>Anayo</em>"
       subtitle="Director – Strategy, Corporate Affairs & Business Development"
-      image="/images/branded-hero.png"
+      image="/probox.png"
     />
     
     <div class="container pt-5 pb-5">
@@ -25,7 +25,7 @@ onMounted(() => {
       
       <div class="profile-grid">
         <div class="profile-image">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Philip Eddy Anayo">
+          <img src="images/william.png" alt="Philip Eddy Anayo">
         </div>
         
         <div class="profile-content">

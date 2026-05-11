@@ -13,7 +13,7 @@ onMounted(() => {
       eyebrow="Executive Leadership"
       title="William <em>Ololo</em>"
       subtitle="Director – Human Security Operations"
-      image="/images/branded-hero.png"
+      image="/cabing.png"
     />
     
     <div class="container pt-5 pb-5">
@@ -25,7 +25,7 @@ onMounted(() => {
       
       <div class="profile-grid">
         <div class="profile-image">
-          <img src="/images/William.jpeg" alt="William Ololo">
+          <img src="/images/profile.jpg" alt="William Ololo">
         </div>
         
         <div class="profile-content">
