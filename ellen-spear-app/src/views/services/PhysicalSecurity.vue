@@ -82,7 +82,7 @@ onMounted(() => {
       <div class="container">
         <div class="tech-grid">
           <div class="tech-img reveal">
-            <img src="..//cabing.png" alt="Physical Security Operations">
+            <img src="/cabing.png" alt="Physical Security Operations">
             <div class="img-over"></div>
           </div>
           <div class="tech-content">

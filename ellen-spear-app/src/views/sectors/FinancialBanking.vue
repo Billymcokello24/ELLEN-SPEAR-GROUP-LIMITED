@@ -21,7 +21,7 @@ onMounted(() => {
       eyebrow="Sector 06"
       title="Financial & <em>Banking</em>"
       subtitle="Ultra-high security for financial institutions. Protecting capital, data, and institutional trust with military precision."
-      image="..//cabing.png"
+      image="/cabing.png"
     />
 
     <section class="container" style="padding-top: 0">

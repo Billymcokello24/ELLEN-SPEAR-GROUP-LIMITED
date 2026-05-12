@@ -21,7 +21,7 @@ onMounted(() => {
       eyebrow="Sector 01"
       title="Corporate & <em>Commercial</em>"
       subtitle="Securing high-value commercial assets and corporate headquarters with integrated physical and digital protection."
-      image="..//cabing.png"
+      image="/cabing.png"
     />
 
     <section class="container" style="padding-top: 0">
