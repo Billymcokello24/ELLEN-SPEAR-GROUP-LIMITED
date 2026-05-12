@@ -21,7 +21,7 @@ onMounted(() => {
       eyebrow="Capabilities / 03"
       title="Alarm & <em>Rapid Response</em>"
       subtitle="Swift, round-the-clock emergency intervention backed by integrated alarm systems and 24/7 tactical monitoring."
-      image="/cabing.png"
+      image="/truck.png"
     />
 
     <section class="container" style="padding-top: 0">
@@ -82,7 +82,7 @@ onMounted(() => {
       <div class="container">
         <div class="tech-grid">
           <div class="tech-img reveal">
-            <img src="..//probox.png" alt="Alarm Monitoring Operations">
+            <img src="/truck.png" alt="Alarm Monitoring Operations">
             <div class="img-over"></div>
           </div>
           <div class="tech-content">
