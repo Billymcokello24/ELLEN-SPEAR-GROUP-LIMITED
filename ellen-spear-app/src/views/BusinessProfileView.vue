@@ -1,6 +1,13 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import PageHero from '../components/PageHero.vue'
+import { useSEO } from '../composables/useSEO'
+
+useSEO({
+  title: 'Corporate Business Profile',
+  description: 'Explore the full institutional capacity of Ellen Spear Group. Integrated security, technology audits, and elite protection services for East Africa.',
+  url: 'https://ellenspeargroup.com/business-profile'
+})
 
 const showClientModal = ref(false)
 const selectedClient = ref(null)

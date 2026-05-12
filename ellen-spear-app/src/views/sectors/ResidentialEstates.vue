@@ -1,6 +1,13 @@
 <script setup>
 import { onMounted } from 'vue'
 import PageHero from '../../components/PageHero.vue'
+import { useSEO } from '../../composables/useSEO'
+
+useSEO({
+  title: 'Residential & Private Estate Security',
+  description: 'Premium security for high-end residential estates and private homes. We combine smart monitoring with professional guarding for absolute peace of mind.',
+  url: 'https://ellenspeargroup.com/sectors/residential-estates'
+})
 
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {

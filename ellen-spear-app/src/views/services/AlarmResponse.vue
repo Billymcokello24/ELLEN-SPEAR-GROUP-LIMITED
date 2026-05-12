@@ -1,6 +1,13 @@
 <script setup>
 import { onMounted } from 'vue'
 import PageHero from '../../components/PageHero.vue'
+import { useSEO } from '../../composables/useSEO'
+
+useSEO({
+  title: 'Alarm & Rapid Response',
+  description: 'Immediate tactical intervention in Nairobi and beyond. Our rapid response units are on 24/7 standby to protect your home or business within minutes.',
+  url: 'https://ellenspeargroup.com/services/alarm-response'
+})
 
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {

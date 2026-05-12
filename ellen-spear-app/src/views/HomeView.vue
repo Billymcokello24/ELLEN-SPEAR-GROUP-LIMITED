@@ -1,5 +1,12 @@
 <script setup>
 import { onMounted } from 'vue'
+import { useSEO } from '../composables/useSEO'
+
+useSEO({
+  title: 'Absolute Security & ICT Excellence',
+  description: 'Ellen Spear Group Limited is East Africa\'s premier integrated security firm, bridging the gap between elite physical protection and advanced cybersecurity.',
+  url: 'https://ellenspeargroup.com/'
+})
 
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {

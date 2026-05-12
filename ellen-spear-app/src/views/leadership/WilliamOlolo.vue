@@ -1,6 +1,13 @@
 <script setup>
 import { onMounted } from 'vue'
 import PageHero from '../../components/PageHero.vue'
+import { useSEO } from '../../composables/useSEO'
+
+useSEO({
+  title: 'William Ololo - CEO',
+  description: 'William Ololo is an accomplished security professional with over 30 years of experience, serving as CEO at Ellen Spear Group.',
+  url: 'https://ellenspeargroup.com/leadership/william-ololo'
+})
 
 onMounted(() => {
   window.scrollTo(0, 0)

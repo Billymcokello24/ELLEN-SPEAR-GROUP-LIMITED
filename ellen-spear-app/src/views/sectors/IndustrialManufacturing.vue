@@ -1,6 +1,13 @@
 <script setup>
 import { onMounted } from 'vue'
 import PageHero from '../../components/PageHero.vue'
+import { useSEO } from '../../composables/useSEO'
+
+useSEO({
+  title: 'Industrial & Manufacturing Security',
+  description: 'Protecting industrial complexes and manufacturing plants from theft, sabotage, and operational disruption with advanced tactical units and monitoring.',
+  url: 'https://ellenspeargroup.com/sectors/industrial-manufacturing'
+})
 
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {

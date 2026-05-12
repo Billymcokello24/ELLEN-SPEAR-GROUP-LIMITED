@@ -1,6 +1,13 @@
 <script setup>
 import { onMounted } from 'vue'
 import PageHero from '../components/PageHero.vue'
+import { useSEO } from '../composables/useSEO'
+
+useSEO({
+  title: 'Contact Us',
+  description: 'Reach out to Ellen Spear Group for 24/7 security support, corporate consultations, and threat assessments in Nairobi, Kenya.',
+  url: 'https://ellenspeargroup.com/contact'
+})
 
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {

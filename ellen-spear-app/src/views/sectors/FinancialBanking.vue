@@ -1,6 +1,13 @@
 <script setup>
 import { onMounted } from 'vue'
 import PageHero from '../../components/PageHero.vue'
+import { useSEO } from '../../composables/useSEO'
+
+useSEO({
+  title: 'Financial & Banking Security',
+  description: 'Ultra-high security for financial institutions in East Africa. Protecting capital, digital assets, and institutional trust with military precision.',
+  url: 'https://ellenspeargroup.com/sectors/financial-banking'
+})
 
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {

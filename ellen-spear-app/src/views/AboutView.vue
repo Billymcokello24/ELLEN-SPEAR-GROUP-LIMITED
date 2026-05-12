@@ -1,6 +1,13 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import PageHero from '../components/PageHero.vue'
+import { useSEO } from '../composables/useSEO'
+
+useSEO({
+  title: 'Our Mission & Vision',
+  description: 'Learn about the mission, vision, and core values that drive Ellen Spear Group to deliver excellence in security and technology services.',
+  url: 'https://ellenspeargroup.com/about'
+})
 
 const activeTab = ref('vision')
 
