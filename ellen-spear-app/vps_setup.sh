@@ -29,20 +29,7 @@ echo "📦 Installing Node.js..."
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt install -y nodejs
 
-# 3. Prepare Web Directory
-echo "📁 Preparing application directory..."
-sudo mkdir -p $APP_DIR
-sudo chown -R $USER:$USER $APP_DIR
-cd $APP_DIR
 
-# 4. Clone Repository
-echo "📂 Cloning repository..."
-if [ -d ".git" ]; then
-    echo "Updating existing repo..."
-    git pull
-else
-    git clone $REPO_URL .
-fi
 
 # 5. Install & Build
 echo "🏗️ Installing dependencies and building..."
