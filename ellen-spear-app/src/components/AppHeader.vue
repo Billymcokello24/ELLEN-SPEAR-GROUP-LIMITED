@@ -11,10 +11,16 @@ const handleScroll = () => {
 
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value
+  if (isMobileMenuOpen.value) {
+    document.body.classList.add('no-scroll')
+  } else {
+    document.body.classList.remove('no-scroll')
+  }
 }
 
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false
+  document.body.classList.remove('no-scroll')
 }
 
 onMounted(() => {
@@ -269,7 +275,8 @@ onUnmounted(() => {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 65%;
+  width: 100%;
+  max-width: 400px;
   z-index: 400;
   background: var(--ink);
   border-left: 1px solid var(--line);
@@ -277,14 +284,20 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding-left: 40px;
-  gap: 24px;
+  padding: 80px 40px;
+  gap: 20px;
   transform: translateX(100%);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .mob-nav.open {
   transform: translateX(0);
+}
+
+@media (max-width: 480px) {
+  .mob-nav {
+    max-width: 100%;
+  }
 }
 
 .mob-nav-logo {

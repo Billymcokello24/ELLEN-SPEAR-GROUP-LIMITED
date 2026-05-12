@@ -1008,14 +1008,16 @@ onMounted(() => {
 
 .leader-img {
   width: 100%;
-  height: 350px;
+  height: 420px;
   overflow: hidden;
+  background: var(--ink);
 }
 
 .leader-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   transition: transform 0.6s ease;
 }
 

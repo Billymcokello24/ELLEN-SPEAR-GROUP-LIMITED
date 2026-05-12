@@ -233,3 +233,7 @@ section {
   padding-left: calc(50vw - 50%);
   padding-right: calc(50vw - 50%);
 }
+
+.no-scroll {
+  overflow: hidden !important;
+}
