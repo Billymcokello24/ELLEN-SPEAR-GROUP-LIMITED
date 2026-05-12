@@ -42,7 +42,7 @@ const clients = [
     name: 'Prodigy Constructions Limited',
     tag: 'Infrastructure',
     logoText: 'PCL',
-    logoImg: '/images/clients/prodigy.png',
+    logoImg: '/Prodigy.png',
     brief: 'Prodigy Constructions Limited is a prominent firm specializing in technology-driven infrastructure solutions and comprehensive building construction.'
   },
   {
@@ -52,22 +52,6 @@ const clients = [
     logoText: 'LCL',
     logoImg: '/Lalacabs.jpeg',
     brief: 'Lala Cabs Limited is a Kenya-based mobility company providing car rental services, airport transfers, and corporate transportation across major cities.'
-  },
-  {
-    id: 'rockwell',
-    name: 'Rockwell Hotel',
-    tag: 'Hospitality',
-    logoText: 'RH',
-    logoImg: '/Rockwell.jpeg',
-    brief: 'Rockwell Hotel, situated in Kisumu, offers refined accommodation and hospitality services, prioritizing guest security and comfort.'
-  },
-  {
-    id: 'cotec',
-    name: 'Cotec Security Limited',
-    tag: 'Integrated Security',
-    logoText: 'CSL',
-    logoImg: '/cotec.jpeg',
-    brief: 'Cotec Security Limited provides integrated security solutions including manned guarding, electronic security systems, and security training across Kenya.'
   }
 ]
 
