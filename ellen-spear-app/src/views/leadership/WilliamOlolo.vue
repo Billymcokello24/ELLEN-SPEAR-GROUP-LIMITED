@@ -12,7 +12,7 @@ onMounted(() => {
     <PageHero 
       eyebrow="Executive Leadership"
       title="William <em>Ololo</em>"
-      subtitle="Director – Human Security Operations"
+      subtitle="CEO and Director – Human Security Operations"
       image="/cabing.png"
     />
     
@@ -34,9 +34,9 @@ onMounted(() => {
           <div class="profile-bio mt-4">
             <p>William Ololo is an accomplished security professional with over 30 years of experience in the security industry. He holds a Bachelor of Arts in Government and Public Administration from Moi University and has built a distinguished career in corporate security management, operations leadership, and strategic administration.</p>
             
-            <p>He currently serves as a Director at Cotec Security Limited, formerly Bedrock Holdings Ltd, where he provides leadership in human security operations, organizational governance, and client security solutions. His extensive industry knowledge has enabled him to successfully oversee security deployments, operational planning, and stakeholder engagement across diverse sectors.</p>
+            <p>He currently serves as the CEO at Ellen Spear Group, where he provides strategic leadership and oversight in organizational operations and security management. His extensive industry experience has enabled him to successfully oversee operational planning, stakeholder engagement, and security coordination across diverse sectors.</p>
             
-            <p>Beyond the security sector, William also serves as a Director at Siaya County Club, demonstrating his commitment to community leadership and institutional development. His strong leadership, integrity, and wealth of experience continue to play a vital role in strengthening the company’s mission of delivering reliable and professional security services.</p>
+            <p>William also serves as a Director at Siaya County Club, reflecting his commitment to leadership, governance, and community development. His strong leadership, integrity, and wealth of experience continue to play a vital role in advancing the company’s mission of delivering reliable and professional security services.</p>
           </div>
         </div>
       </div>

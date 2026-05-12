@@ -366,9 +366,9 @@ onMounted(() => {
             </div>
             <div class="leader-info">
               <h3>William Ololo</h3>
-              <p class="leader-title">Director – Human Security Operations</p>
+              <p class="leader-title">CEO and Director – Human Security Operations</p>
               <div class="leader-bio">
-                <p>William Ololo is an accomplished security professional with over 30 years of experience in the security industry. He has built a distinguished career in corporate security management...</p>
+                <p>William Ololo is an accomplished security professional with over 30 years of experience in the security industry. He currently serves as the CEO at Ellen Spear Group, where he provides strategic leadership and oversight in organizational operations and security management.</p>
               </div>
               <RouterLink to="/leadership/william-ololo" class="read-more-btn mt-3">Read More</RouterLink>
             </div>

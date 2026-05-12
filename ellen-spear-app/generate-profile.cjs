@@ -6,11 +6,37 @@ async function generatePDF() {
   const browser = await puppeteer.launch({ executablePath: '/usr/bin/google-chrome', args: ['--no-sandbox'] });
   const page = await browser.newPage();
   
-  const filePath = path.join(__dirname, 'profile-template.html');
-  const fileUrl = `file://${filePath}`;
+  page.on('console', msg => console.log('PAGE LOG:', msg.text()));
+  page.on('pageerror', err => console.log('PAGE ERROR:', err.message));
+  page.on('requestfailed', request => {
+    const failure = request.failure();
+    console.log('REQUEST FAILED:', request.url(), failure ? failure.errorText : 'Unknown Error');
+  });
   
-  console.log(`Loading HTML template from: ${fileUrl}`);
-  await page.goto(fileUrl, { waitUntil: 'networkidle0' });
+  const fs = require('fs');
+  const filePath = path.join(__dirname, 'profile-template.html');
+  const publicPath = path.join(__dirname, 'public');
+  
+  let htmlContent = fs.readFileSync(filePath, 'utf8');
+  
+  // Replace localhost and root-relative URLs with absolute file paths
+  const absolutePublicPath = `file://${publicPath}`; // Removed trailing slash
+  
+  // Replace http://localhost:5174/
+  htmlContent = htmlContent.replace(/http:\/\/localhost:5174\//g, `${absolutePublicPath}/`);
+  
+  // Replace src="/
+  htmlContent = htmlContent.replace(/src=(['"])\/([^/])/g, `src=$1${absolutePublicPath}/$2`);
+  
+  // Replace url('/
+  htmlContent = htmlContent.replace(/url\((['"])\//g, `url($1${absolutePublicPath}/`);
+  
+  // Debug: Write the processed HTML to a file to check paths
+  const tempFilePath = path.join(__dirname, 'temp-profile.html');
+  fs.writeFileSync(tempFilePath, htmlContent);
+  
+  console.log(`Loading processed HTML via temp file: file://${tempFilePath}`);
+  await page.goto(`file://${tempFilePath}`, { waitUntil: 'networkidle0' });
   await new Promise(resolve => setTimeout(resolve, 3000));
 
   const pdfPath = path.join(__dirname, 'public', 'Ellen_Spear_Group_Business_Profile.pdf');

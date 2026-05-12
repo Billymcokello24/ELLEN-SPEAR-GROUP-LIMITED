@@ -57,7 +57,7 @@ onMounted(() => {
               </div>
               <div class="ch-body">
                 <span class="ch-label">Headquarters</span>
-                <div class="ch-val">Nairobi, Kenya</div>
+                <div class="ch-val">Lavingtone, King'ara Road, Nairobi, Kenya</div>
               </div>
             </div>
           </div>

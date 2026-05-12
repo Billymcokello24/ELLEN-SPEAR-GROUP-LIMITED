@@ -12,7 +12,17 @@ echo "🛡️ Starting Professional VPS Setup..."
 
 # 1. Update and Install Prerequisites
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y git nginx certbot python3-certbot-nginx curl
+sudo apt install -y git nginx certbot python3-certbot-nginx curl lsof
+
+# 2. Cleanup conflicting web servers
+echo "🛑 Checking for conflicting web servers (LiteSpeed/Apache)..."
+sudo systemctl stop lshttpd 2>/dev/null || true
+sudo systemctl disable lshttpd 2>/dev/null || true
+sudo systemctl stop apache2 2>/dev/null || true
+sudo systemctl disable apache2 2>/dev/null || true
+
+# Kill anything else on port 80 just in case
+sudo fuser -k 80/tcp 2>/dev/null || true
 
 # 2. Install Node.js (LTS v20)
 echo "📦 Installing Node.js..."
