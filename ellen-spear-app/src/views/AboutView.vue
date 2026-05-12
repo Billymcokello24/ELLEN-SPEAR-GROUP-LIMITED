@@ -27,7 +27,7 @@ onMounted(() => {
       eyebrow="Establishment & Legacy"
       title="Where Security Meets <em>Sophistication</em>"
       subtitle="Ellen Spear Group is a premier security and technology solutions company dedicated to integrated protection for businesses, institutions, and individuals."
-      image="../../public/cabing.png"
+      image="/truck.png"
     />
 
     <!-- MISSION & VISION SECTION -->
@@ -45,18 +45,16 @@ onMounted(() => {
 
           <div class="tab-contents">
             <div v-if="activeTab === 'vision'" class="atab-content reveal in">
-              <p>To be the most trusted provider of integrated security and ICT solutions in Africa, delivering unmatched safety, reliability, and innovation to every client we serve.</p>
+              <p>To be the premier standard of absolute security and intelligence in Africa, pioneering unified defense frameworks for the modern era.</p>
             </div>
             <div v-if="activeTab === 'mission'" class="atab-content reveal in">
-              <p>To provide world-class security services — both physical and digital — through professionalism, innovation, and commitment, ensuring our clients' assets, data, and lives are always protected.</p>
+              <p>To provide uncompromising, integrated security solutions that empower institutions to operate safely and confidently in dynamic environments, bridging the gap between physical safety and digital resilience.</p>
             </div>
             <div v-if="activeTab === 'values'" class="atab-content reveal in">
               <div class="values-grid">
-                <div class="val"><div class="val-diamond"></div><span>Integrity</span></div>
-                <div class="val"><div class="val-diamond"></div><span>Professionalism</span></div>
+                <div class="val"><div class="val-diamond"></div><span>Integrity & Trust</span></div>
+                <div class="val"><div class="val-diamond"></div><span>Vigilance</span></div>
                 <div class="val"><div class="val-diamond"></div><span>Innovation</span></div>
-                <div class="val"><div class="val-diamond"></div><span>Responsiveness</span></div>
-                <div class="val"><div class="val-diamond"></div><span>Commitment</span></div>
                 <div class="val"><div class="val-diamond"></div><span>Excellence</span></div>
               </div>
             </div>
@@ -67,7 +65,7 @@ onMounted(() => {
           <div class="a-corner tl"></div>
           <div class="a-corner br"></div>
           <div class="about-img-wrap">
-            <img src="../../public/team.png" alt="Ellen Spear Group security gate and entry monitoring">
+            <img src="/consults.png" alt="Ellen Spear Group security gate and entry monitoring">
           </div>
           <div class="about-float">
             <div class="about-float-num">100<sup style="font-size:1.1rem;color:var(--gold)">%</sup></div>
@@ -326,5 +324,10 @@ onMounted(() => {
 
 @media (max-width: 680px) {
   .process-steps { grid-template-columns: 1fr; }
+  .about-tabs { flex-wrap: wrap; }
+  .atab { padding: 12px 18px; font-size: 0.7rem; }
+  .about-img-wrap img { height: 320px; }
+  .about-float { right: 0; bottom: -10px; padding: 20px; min-width: 160px; }
+  .about-float-num { font-size: 2.5rem; }
 }
 </style>

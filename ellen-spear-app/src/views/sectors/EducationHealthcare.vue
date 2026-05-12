@@ -21,7 +21,7 @@ onMounted(() => {
       eyebrow="Sector 05"
       title="Education & <em>Healthcare</em>"
       subtitle="Ensuring safe environments for learning and healing. Specialized security for campuses, hospitals, and clinics."
-      image="../../../public/cabing.png"
+      image="..//cabing.png"
     />
 
     <section class="container" style="padding-top: 0">

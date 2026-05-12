@@ -21,7 +21,7 @@ onMounted(() => {
       eyebrow="Capabilities / 01"
       title="IT & <em>Cyber Security</em>"
       subtitle="Defending your digital perimeter with advanced tactical intelligence, real-time monitoring, and proactive threat neutralization."
-      image="../../public/cabing.png"
+      image="/cabing.png"
     />
 
     <section class="container" style="padding-top: 0">
@@ -82,7 +82,7 @@ onMounted(() => {
       <div class="container">
         <div class="tech-grid">
           <div class="tech-img reveal">
-            <img src="../../../public/probox.png" alt="Cyber Security Operations">
+            <img src="..//probox.png" alt="Cyber Security Operations">
             <div class="img-over"></div>
           </div>
           <div class="tech-content">

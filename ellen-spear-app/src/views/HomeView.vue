@@ -19,7 +19,7 @@ onMounted(() => {
     <!-- HERO -->
     <section id="hero">
       <div class="hero-bg">
-        <img src="../../public/cabing.png" alt="Nairobi Skyline Corporate Security">
+        <img src="/truck.png" alt="Nairobi Skyline Corporate Security">
       </div>
       <div class="hero-main">
         <div class="hero-eyebrow">
@@ -105,7 +105,7 @@ onMounted(() => {
           <div class="a-corner tl"></div>
           <div class="a-corner br"></div>
           <div class="about-img-wrap">
-            <img src="../../public/ellen-spear-logo.png" alt="ELLEN SPEAR GROUP LIMITED Command Centre">
+            <img src="/consults.png" alt="ELLEN SPEAR GROUP LIMITED Security Professionals">
           </div>
           <div class="about-float">
             <div class="about-float-num">100<sup style="font-size:1.1rem;color:var(--gold)">%</sup></div>
@@ -158,6 +158,33 @@ onMounted(() => {
       </div>
     </section>
 
+    <!-- OPERATIONS PREVIEW -->
+    <section id="operations-preview" class="operations-preview">
+      <div class="container">
+        <div class="ops-head">
+          <div>
+            <div class="s-eyebrow reveal">Field Operations</div>
+            <h2 class="display reveal d1">Teams, Patrols<br><em>& Rapid Response</em></h2>
+          </div>
+          <p class="s-body reveal d2">Visible security presence, mobile response, and tactical coordination across businesses, estates, institutions, and executive protection assignments.</p>
+        </div>
+        <div class="ops-grid mt-4 reveal d3">
+          <div class="ops-feature large">
+            <img src="/team3.png" alt="Ellen Spear security team">
+            <div class="ops-label">Trained Guards</div>
+          </div>
+          <div class="ops-feature">
+            <img src="/team4.png" alt="Ellen Spear field response team">
+            <div class="ops-label">Mobile Patrols</div>
+          </div>
+          <div class="ops-feature">
+            <img src="/truck.png" alt="Ellen Spear rapid response truck">
+            <div class="ops-label">Rapid Response Fleet</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ADVANTAGE PREVIEW -->
     <section id="advantage-preview" class="container">
       <div class="adv-grid">
@@ -171,7 +198,7 @@ onMounted(() => {
         </div>
         <div class="adv-right reveal d2">
           <div class="adv-img">
-            <img src="../../public/team.png" alt="Security professional">
+            <img src="/consults.png" alt="Security professional">
             <div class="adv-img-over"></div>
             <div class="adv-img-quote">
               <blockquote>"Threats do not distinguish between physical and digital. Neither do we."</blockquote>
@@ -605,6 +632,74 @@ onMounted(() => {
 .svc-link svg { stroke: currentColor; stroke-width: 2; fill: none; width: 14px; height: 14px; transition: transform .2s; }
 .svc:hover .svc-link svg { transform: translate(3px, -3px); }
 
+/* OPERATIONS PREVIEW */
+.operations-preview {
+  padding: 110px 0;
+  background: var(--ink);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.ops-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: end;
+}
+
+.ops-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr .9fr;
+  gap: 22px;
+}
+
+.ops-feature {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--ink2);
+}
+
+.ops-feature.large {
+  min-height: 460px;
+}
+
+.ops-feature img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  opacity: .72;
+  transition: transform .6s ease, opacity .25s ease;
+}
+
+.ops-feature:hover img {
+  transform: scale(1.04);
+  opacity: .9;
+}
+
+.ops-feature::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgba(13, 13, 14, .94));
+}
+
+.ops-label {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1;
+  font-family: var(--f-cond);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--gold2);
+}
+
 /* ADVANTAGE PREVIEW */
 .adv-grid {
   display: grid;
@@ -664,15 +759,24 @@ onMounted(() => {
 @media (max-width: 1100px) {
   .hero-main { padding: 130px 40px 0; }
   .hero-bottom { padding: 0 40px 44px; }
-  .about-grid, .services-head, .adv-grid { grid-template-columns: 1fr; gap: 60px; }
+  .about-grid, .services-head, .ops-head, .ops-grid, .adv-grid { grid-template-columns: 1fr; gap: 60px; }
   .about-right { max-width: 480px; }
+  .ops-feature.large { min-height: 360px; }
 }
 
 @media (max-width: 680px) {
-  .hero-main { padding: 120px 24px 0; }
-  .hero-bottom { padding: 0 24px 36px; flex-direction: column; align-items: flex-start; gap: 28px; }
-  .hero-stats { flex-direction: column; gap: 20px; border: none; }
+  .hero-main { padding: 110px 24px 0; }
+  .hero-h1 { font-size: clamp(2.5rem, 12vw, 4.5rem); }
+  .hero-sub { font-size: 0.95rem; line-height: 1.6; margin-top: 24px; }
+  .hero-bottom { padding: 0 24px 30px; flex-direction: column; align-items: flex-start; gap: 32px; }
+  .hero-stats { flex-direction: column; gap: 24px; border: none; padding: 0; }
   .h-stat { padding: 0; border: none; }
+  .h-stat-num { font-size: 2.2rem; }
   .svcs { grid-template-columns: 1fr; }
+  .svc { padding: 36px 24px; }
+  .ticker-wrap { padding: 16px 0; }
+  .ops-grid { gap: 16px; }
+  .ops-feature { min-height: 280px; }
+  .about-img-wrap img { height: 320px; }
 }
 </style>

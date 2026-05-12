@@ -21,7 +21,7 @@ onMounted(() => {
       eyebrow="Capabilities / 04"
       title="Security <em>Consultancy</em>"
       subtitle="Expert guidance to architect bespoke security frameworks tailored to your unique institutional threat landscape."
-      image="../../public/cabing.png"
+      image="/cabing.png"
     />
 
     <section class="container" style="padding-top: 0">
@@ -82,7 +82,7 @@ onMounted(() => {
       <div class="container">
         <div class="tech-grid">
           <div class="tech-img reveal">
-            <img src="../../../public/consult.png" alt="Security Consultancy Session">
+            <img src="..//consult.png" alt="Security Consultancy Session">
             <div class="img-over"></div>
           </div>
           <div class="tech-content">

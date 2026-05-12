@@ -25,7 +25,7 @@ onMounted(() => {
       
       <div class="profile-grid">
         <div class="profile-image">
-          <img src="images/william.png" alt="Philip Eddy Anayo">
+          <img src="/images/william.png" alt="Philip Eddy Anayo">
         </div>
         
         <div class="profile-content">

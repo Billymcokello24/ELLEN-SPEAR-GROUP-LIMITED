@@ -4,7 +4,7 @@
       <div class="foot-top">
         <div class="foot-brand">
           <RouterLink to="/" class="foot-brand-logo">
-            <div class="nav-emblem"><span>ESG</span></div>
+            <img src="/ellen-spear-logo.png" alt="Ellen Spear Group Logo" class="footer-logo-img">
             <span class="nav-wordmark">Ellen&nbsp;<em>Spear</em>&nbsp;Group</span>
           </RouterLink>
           <p>Integrated protection for businesses, institutions, and individuals. Safeguarding Africa's most demanding environments.</p>
@@ -15,6 +15,7 @@
           <ul>
             <li><RouterLink to="/about">About Us</RouterLink></li>
             <li><RouterLink to="/business-profile">Business Profile</RouterLink></li>
+            <li><a href="/Ellen_Spear_Group_Business_Profile.pdf" download style="color:var(--gold)">Download Profile (PDF)</a></li>
             <li><RouterLink to="/careers">Careers</RouterLink></li>
             <li><RouterLink to="/contact">Contact</RouterLink></li>
           </ul>
@@ -34,7 +35,7 @@
           <h6>Connect</h6>
           <ul>
             <li><a href="mailto:info@ellenspear.com">info@ellenspear.com</a></li>
-            <li><a href="tel:+254700000000">+254 700 000 000</a></li>
+            <li><a href="tel:0722747607">0722747607</a></li>
             <li><a href="#">LinkedIn</a></li>
             <li><a href="#">Twitter</a></li>
           </ul>
@@ -66,11 +67,19 @@
   margin-bottom: 28px;
 }
 
+.footer-logo-img {
+  width: 90px;
+  height: auto;
+  filter: brightness(1.1);
+  display: block;
+}
+
 .foot-brand-logo {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
+  flex-direction: column;
+  gap: 16px;
+  text-decoration: none;
+  background: transparent !important;
 }
 
 .nav-emblem {
@@ -105,55 +114,55 @@
 }
 
 .foot-brand p {
+  color: #aaa;
+  margin-top: 24px;
+  max-width: 320px;
+  line-height: 1.6;
   font-size: .85rem;
-  font-weight: 300;
-  color: var(--mist);
-  line-height: 1.75;
-  max-width: 280px;
 }
 
 .foot-col h6 {
+  color: #fff;
   font-family: var(--f-cond);
-  font-size: .7rem;
-  font-weight: 700;
-  letter-spacing: .18em;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--cream);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .foot-col ul {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  padding: 0;
 }
 
-.foot-col a {
-  font-size: .85rem;
-  font-weight: 300;
-  color: var(--mist);
-  transition: color .2s;
+.foot-col ul li {
+  margin-bottom: 14px;
 }
 
-.foot-col a:hover {
-  color: var(--gold2);
+.foot-col ul li a {
+  color: #888;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color .3s;
+}
+
+.foot-col ul li a:hover {
+  color: var(--gold);
 }
 
 .foot-bottom {
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.foot-bottom p {
-  font-size: .76rem;
-  font-weight: 300;
-  color: var(--mist);
+  color: #666;
+  font-size: 0.9rem;
 }
 
 .foot-bottom span {
   color: var(--gold);
+  font-weight: 500;
 }
 
 @media (max-width: 1100px) {

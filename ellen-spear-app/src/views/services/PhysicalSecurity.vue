@@ -21,7 +21,7 @@ onMounted(() => {
       eyebrow="Capabilities / 02"
       title="Physical <em>Security</em>"
       subtitle="Elite trained personnel and advanced tactical infrastructure ensuring complete on-ground protection for Africa's most demanding environments."
-      image="../../public/probox.png"
+      image="/probox.png"
     />
 
     <section class="container" style="padding-top: 0">
@@ -82,7 +82,7 @@ onMounted(() => {
       <div class="container">
         <div class="tech-grid">
           <div class="tech-img reveal">
-            <img src="../../../public/cabing.png" alt="Physical Security Operations">
+            <img src="..//cabing.png" alt="Physical Security Operations">
             <div class="img-over"></div>
           </div>
           <div class="tech-content">

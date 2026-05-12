@@ -16,6 +16,9 @@ defineProps({
       <div class="s-eyebrow reveal in">{{ eyebrow }}</div>
       <h1 class="display reveal in d1" v-html="title"></h1>
       <p class="s-body reveal in d2 mt-2" v-if="subtitle">{{ subtitle }}</p>
+      <div class="hero-actions mt-4 reveal in d3">
+        <slot name="actions"></slot>
+      </div>
     </div>
   </section>
 </template>
