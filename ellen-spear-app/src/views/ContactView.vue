@@ -46,7 +46,7 @@ onMounted(() => {
               </div>
               <div class="ch-body">
                 <span class="ch-label">Phone Support</span>
-                <div class="ch-val">0722747607</div>
+                <div class="ch-val">+254 715 822350</div>
               </div>
             </div>
             <div class="channel">
@@ -115,7 +115,7 @@ onMounted(() => {
           <h2 class="display d1">Immediate <em>Crisis</em> Response</h2>
           <p class="s-body mt-2" style="margin: 20px auto">For active threats or emergency tactical deployment, bypass the form and call our command centre directly.</p>
           <div class="mt-4">
-            <a href="tel:0722747607" class="btn-gold">Emergency Line: 0722747607</a>
+            <a href="tel:+254715822350" class="btn-gold">Emergency Line: +254 715 822350</a>
           </div>
         </div>
       </div>

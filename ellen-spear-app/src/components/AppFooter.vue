@@ -35,7 +35,7 @@
           <h6>Connect</h6>
           <ul>
             <li><a href="mailto:info@ellenspear.com">info@ellenspear.com</a></li>
-            <li><a href="tel:0722747607">0722747607</a></li>
+            <li><a href="tel:+254715822350">+254 715 822350</a></li>
             <li>Purple Tower Building, Shimo la Tewa Road, 13th floor, Nairobi</li>
             <li><a href="#">LinkedIn</a></li>
             <li><a href="#">Twitter</a></li>
