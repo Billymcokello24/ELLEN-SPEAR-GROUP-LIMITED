@@ -350,23 +350,8 @@ onMounted(() => {
           <h2 class="display reveal d1" style="text-align: center;">Executive <em>Leadership</em></h2>
         </div>
         <div class="leadership-grid mt-5">
-          <!-- Eng. David Wasonga -->
-          <div class="leader-card reveal d1">
-            <div class="leader-img">
-              <img src="/images/David.jpeg" alt="Eng. David Wasonga" onerror="this.src='https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80'">
-            </div>
-            <div class="leader-info">
-              <h3>Eng. David Wasonga</h3>
-              <p class="leader-title">Director – ICT & Integrated Security Systems</p>
-              <div class="leader-bio">
-                <p>Eng. David Wasonga is an accomplished Electrical and ICT Engineer with extensive experience in technology integration, digital transformation, and ICT infrastructure management...</p>
-              </div>
-              <RouterLink to="/leadership/david-wasonga" class="read-more-btn mt-3">Read More</RouterLink>
-            </div>
-          </div>
-
           <!-- Eddy Anayo -->
-          <div class="leader-card reveal d2">
+          <div class="leader-card reveal d1">
             <div class="leader-img">
               <img src="/images/william.png" alt="Eddy Anayo" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80'">
             </div>
@@ -377,6 +362,21 @@ onMounted(() => {
                 <p>Eddy Anayo is a seasoned entrepreneur and business leader with extensive experience in corporate leadership, public service, and organizational development...</p>
               </div>
               <RouterLink to="/leadership/philip-anayo" class="read-more-btn mt-3">Read More</RouterLink>
+            </div>
+          </div>
+
+          <!-- Eng. David Wasonga -->
+          <div class="leader-card reveal d2">
+            <div class="leader-img">
+              <img src="/images/David.jpeg" alt="Eng. David Wasonga" onerror="this.src='https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80'">
+            </div>
+            <div class="leader-info">
+              <h3>Eng. David Wasonga</h3>
+              <p class="leader-title">Director – ICT & Integrated Security Systems</p>
+              <div class="leader-bio">
+                <p>Eng. David Wasonga is an accomplished Electrical and ICT Engineer with extensive experience in technology integration, digital transformation, and ICT infrastructure management...</p>
+              </div>
+              <RouterLink to="/leadership/david-wasonga" class="read-more-btn mt-3">Read More</RouterLink>
             </div>
           </div>
         </div>
