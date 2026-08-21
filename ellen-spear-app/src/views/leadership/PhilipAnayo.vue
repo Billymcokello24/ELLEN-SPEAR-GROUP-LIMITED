@@ -4,8 +4,8 @@ import PageHero from '../../components/PageHero.vue'
 import { useSEO } from '../../composables/useSEO'
 
 useSEO({
-  title: 'Philip Anayo - Director of Operations',
-  description: 'Philip Anayo serves as the Director of Operations at Ellen Spear Group, overseeing elite physical guarding units and tactical deployment.',
+  title: 'Eddy Anayo - CEO and Director',
+  description: 'Eddy Anayo serves as CEO and Director – Strategy, Corp. Affairs & Business Dev at Ellen Spear Group.',
   url: 'https://ellenspeargroup.com/leadership/philip-anayo'
 })
 
@@ -18,8 +18,8 @@ onMounted(() => {
   <div class="profile-page bg-ink-full" style="padding-top: 0;">
     <PageHero 
       eyebrow="Executive Leadership"
-      title="Philip Eddy <em>Anayo</em>"
-      subtitle="Director – Strategy, Corporate Affairs & Business Development"
+      title="Eddy <em>Anayo</em>"
+      subtitle="CEO and Director – Strategy, Corp. Affairs & Business Dev"
       image="/probox.png"
     />
     
@@ -32,18 +32,18 @@ onMounted(() => {
       
       <div class="profile-grid">
         <div class="profile-image">
-          <img src="/images/william.png" alt="Philip Eddy Anayo">
+        <img src="/images/william.png" alt="Eddy Anayo">
         </div>
         
         <div class="profile-content">
           <div class="s-eyebrow">Professional Bio</div>
           
           <div class="profile-bio mt-4">
-            <p>Philip Eddy Anayo is a seasoned entrepreneur and business leader with extensive experience in corporate leadership, public service, and organizational development. He currently serves as Director and CEO at Homeland Itoya Events, where he oversees strategic growth, business operations, and stakeholder relations.</p>
+            <p>Eddy Anayo is a seasoned entrepreneur and business leader with extensive experience in corporate leadership, public service, and organizational development. He currently serves as Director and CEO at Homeland Itoya Events, where he oversees strategic growth, business operations, and stakeholder relations.</p>
             
-            <p>He also serves as a Non-Executive Member at the Kenya Rugby Union, contributing to governance and strategic development within the sports sector. Philip has previously served as the Member of County Assembly (MCA) for Milimani Ward in Kisumu County Assembly, where he played a key role in leadership, policy oversight, and community representation.</p>
+            <p>He also serves as a Non-Executive Member at the Kenya Rugby Union, contributing to governance and strategic development within the sports sector. Eddy has previously served as the Member of County Assembly (MCA) for Milimani Ward in Kisumu County Assembly, where he played a key role in leadership, policy oversight, and community representation.</p>
             
-            <p>With a diverse background spanning entrepreneurship, governance, and leadership, Philip brings strong expertise in business development, strategic partnerships, and corporate affairs. His dynamic leadership approach and commitment to excellence continue to support the company’s growth and long-term vision.</p>
+            <p>With a diverse background spanning entrepreneurship, governance, and leadership, Eddy brings strong expertise in business development, strategic partnerships, and corporate affairs. His dynamic leadership approach and commitment to excellence continue to support the company’s growth and long-term vision.</p>
           </div>
         </div>
       </div>

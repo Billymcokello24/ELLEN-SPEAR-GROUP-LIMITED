@@ -350,23 +350,8 @@ onMounted(() => {
           <h2 class="display reveal d1" style="text-align: center;">Executive <em>Leadership</em></h2>
         </div>
         <div class="leadership-grid mt-5">
-          <!-- William Ololo -->
-          <div class="leader-card reveal d1">
-            <div class="leader-img">
-              <img src="/images/ololo.jpeg" alt="William Ololo" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80'">
-            </div>
-            <div class="leader-info">
-              <h3>William Ololo</h3>
-              <p class="leader-title">CEO and Director – Human Security Operations</p>
-              <div class="leader-bio">
-                <p>William Ololo is an accomplished security professional with over 30 years of experience in the security industry. He currently serves as the CEO at Ellen Spear Group, where he provides strategic leadership and oversight in organizational operations and security management.</p>
-              </div>
-              <RouterLink to="/leadership/william-ololo" class="read-more-btn mt-3">Read More</RouterLink>
-            </div>
-          </div>
-          
           <!-- Eng. David Wasonga -->
-          <div class="leader-card reveal d2">
+          <div class="leader-card reveal d1">
             <div class="leader-img">
               <img src="/images/David.jpeg" alt="Eng. David Wasonga" onerror="this.src='https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80'">
             </div>
@@ -380,16 +365,16 @@ onMounted(() => {
             </div>
           </div>
 
-          <!-- Philip Eddy Anayo -->
-          <div class="leader-card reveal d3">
+          <!-- Eddy Anayo -->
+          <div class="leader-card reveal d2">
             <div class="leader-img">
-              <img src="/images/william.png" alt="Philip Eddy Anayo" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80'">
+              <img src="/images/william.png" alt="Eddy Anayo" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80'">
             </div>
             <div class="leader-info">
-              <h3>Philip Eddy Anayo</h3>
-              <p class="leader-title">Director – Strategy, Corp. Affairs & Business Dev</p>
+              <h3>Eddy Anayo</h3>
+              <p class="leader-title">CEO and Director – Strategy, Corp. Affairs & Business Dev</p>
               <div class="leader-bio">
-                <p>Philip Eddy Anayo is a seasoned entrepreneur and business leader with extensive experience in corporate leadership, public service, and organizational development...</p>
+                <p>Eddy Anayo is a seasoned entrepreneur and business leader with extensive experience in corporate leadership, public service, and organizational development...</p>
               </div>
               <RouterLink to="/leadership/philip-anayo" class="read-more-btn mt-3">Read More</RouterLink>
             </div>
